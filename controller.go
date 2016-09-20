@@ -8,7 +8,7 @@ import (
     "encoding/json"
 )
 
-type Controller struct{}
+type Controller struct {}
 
 func (c *Controller) RenderHtml(rw http.ResponseWriter, file string, data interface{}) {
 
