@@ -8,9 +8,9 @@ import (
     "encoding/json"
 )
 
-type AppController struct{}
+type Controller struct{}
 
-func (c *AppController) RenderHtml(rw http.ResponseWriter, file string, data interface{}) {
+func (c *Controller) RenderHtml(rw http.ResponseWriter, file string, data interface{}) {
 
     fp := path.Join("view", file)
     tmpl, err := template.ParseFiles(fp)
@@ -26,7 +26,7 @@ func (c *AppController) RenderHtml(rw http.ResponseWriter, file string, data int
     }
 }
 
-func (c *AppController) RenderJson(rw http.ResponseWriter, data interface{}) {
+func (c *Controller) RenderJson(rw http.ResponseWriter, data interface{}) {
 
     if data != nil {
 
