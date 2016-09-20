@@ -1,4 +1,4 @@
-package core
+package goweb
 
 type AppDataModel struct{}
 
